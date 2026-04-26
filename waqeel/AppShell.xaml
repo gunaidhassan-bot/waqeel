@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Shell
-    x:Class="waqeel.AppShell"
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:waqeel"
-    Title="waqeel">
+  x:Class="waqeel.AppShell"
+  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:local="clr-namespace:waqeel">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+  <ShellContent
+    Title="الرئيسية"
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Route="main" />
 
+  <ShellContent
+    Title="الحسابات"
+    ContentTemplate="{DataTemplate local:AccountsPage}"
+    Route="accounts" />
+
+  <ShellContent
+    Title="إضافة مزارع"
+    ContentTemplate="{DataTemplate local:AddFarmerPage}"
+    Route="addfarmer" />
+
+  <ShellContent
+    Title="بيانات التحميل"
+    ContentTemplate="{DataTemplate local:beanatthmel}"
+    Route="beanatthmel" />
 </Shell>

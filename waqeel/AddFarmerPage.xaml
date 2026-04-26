@@ -9,16 +9,13 @@
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="15">
             <Label Text="بيانات المزارع الجديد" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" />
-
             <Entry x:Name="EntName" Placeholder="اسم المزارع الكامل" />
             <Entry x:Name="EntPhone" Placeholder="رقم الجوال" Keyboard="Telephone" />
             <Entry x:Name="EntAddress" Placeholder="المنطقة / العنوان" />
             <Entry x:Name="EntOpeningBalance" Placeholder="الرصيد الافتتاحي (إن وجد)" Keyboard="Numeric" />
-
-            <Button Text="حفظ المزارع وفتح حساب" 
-                    BackgroundColor="#2B3F5C"
-                    TextColor="White"
-                    Clicked="OnSaveFarmerClicked" />
+            <Button Text="حفظ المزارع وفتح حساب" BackgroundColor="#2B3F5C" TextColor="White" Clicked="OnSaveFarmerClicked" />
+            <!-- زر العودة للرئيسية -->
+            <Button Text="العودة للرئيسية" BackgroundColor="#2B3F5C" TextColor="White" Margin="0,20,0,0" Clicked="OnBackToHomeClicked"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

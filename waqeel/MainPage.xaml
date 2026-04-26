@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="waqeel.MainPage"
+             Title="لوحة تحكم وكيل"
+             FlowDirection="RightToLeft"
+             BackgroundColor="#F0F2F5">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="25">
+
+            <!-- الهيدر (الترويسة) -->
+            <Frame BackgroundColor="#2B3F5C" CornerRadius="15" Padding="20" HasShadow="True">
+                <VerticalStackLayout Spacing="5" HorizontalOptions="Center">
+                    <Label Text="نظام وكيل لتجارة الخضار" TextColor="White" FontSize="24" FontAttributes="Bold" />
+                    <Label Text="إدارة التوريدات والحسابات المركزية" TextColor="#D1D1D1" FontSize="14" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- شبكة الأزرار الرئيسية -->
+            <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto" ColumnSpacing="15" RowSpacing="15">
+
+                <!-- زر الدليل المحاسبي -->
+                <Frame Grid.Row="0" Grid.Column="0" BackgroundColor="White" CornerRadius="15" HasShadow="True">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnAccountsClicked" />
+                    </Frame.GestureRecognizers>
+                    <VerticalStackLayout HorizontalOptions="Center" Spacing="10" Padding="10">
+                        <Label Text="📑" FontSize="45" HorizontalOptions="Center"/>
+                        <Label Text="الدليل المحاسبي" FontAttributes="Bold" TextColor="#2B3F5C" HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- زر بيانات التحميل (التعبئة) -->
+                <Frame Grid.Row="0" Grid.Column="1" BackgroundColor="White" CornerRadius="15" HasShadow="True">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnPackingClicked" />
+                    </Frame.GestureRecognizers>
+                    <VerticalStackLayout HorizontalOptions="Center" Spacing="10" Padding="10">
+                        <Label Text="📦" FontSize="45" HorizontalOptions="Center"/>
+                        <Label Text="بيانات التحميل" FontAttributes="Bold" TextColor="#2B3F5C" HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- زر إضافة مزارع -->
+                <Frame Grid.Row="1" Grid.Column="0" BackgroundColor="White" CornerRadius="15" HasShadow="True">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnAddFarmerClicked" />
+                    </Frame.GestureRecognizers>
+                    <VerticalStackLayout HorizontalOptions="Center" Spacing="10" Padding="10">
+                        <Label Text="👤" FontSize="45" HorizontalOptions="Center"/>
+                        <Label Text="إدارة المزارعين" FontAttributes="Bold" TextColor="#2B3F5C" HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- زر إغلاق اليومية (مستقبلي) -->
+                <Frame Grid.Row="1" Grid.Column="1" BackgroundColor="White" CornerRadius="15" HasShadow="True" Opacity="0.6">
+                    <VerticalStackLayout HorizontalOptions="Center" Spacing="10" Padding="10">
+                        <Label Text="🔒" FontSize="45" HorizontalOptions="Center"/>
+                        <Label Text="إغلاق اليومية" FontAttributes="Bold" TextColor="#2B3F5C" HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+            </Grid>
+
+            <!-- معلومات النظام -->
+            <Label Text="حالة الربط: متصل بـ PostgreSQL" 
+                   TextColor="Gray" FontSize="12" HorizontalOptions="Center" Margin="0,30,0,0"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

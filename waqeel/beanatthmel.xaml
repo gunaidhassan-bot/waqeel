@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="waqeel.MainPage"
+    Title="سجل التعبئة">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="12">
+
+            <Label Text="إضافة سجل تعبئة" FontSize="20" HorizontalOptions="Center" />
+
+            <Label Text="اسم المزارع" />
+            <Entry x:Name="FarmerEntry" Placeholder="أدخل اسم المزارع" />
+
+            <Label Text="نوع البضاعة" />
+            <Entry x:Name="ItemEntry" Placeholder="نوع البضاعة (اختياري)" />
+
+            <Label Text="الكمية" />
+            <Entry x:Name="QtyEntry" Keyboard="Numeric" Placeholder="الكمية" />
+
+            <Label Text="اسم السائق" />
+            <Entry x:Name="DriverEntry" Placeholder="اسم السائق (اختياري)" />
+
+            <Button Text="حفظ" Clicked="OnSaveClicked" HorizontalOptions="Center" />
+
+            <Label x:Name="StatusLabel" Text="" TextColor="Green" HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

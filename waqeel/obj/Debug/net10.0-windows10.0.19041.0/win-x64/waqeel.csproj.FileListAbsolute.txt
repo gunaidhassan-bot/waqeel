@@ -1,0 +1,12 @@
+E:\waqeel\waqeel\waqeel\obj\Debug\net10.0-windows10.0.19041.0\win-x64\waqeel.csproj.AssemblyReference.cache
+E:\waqeel\waqeel\waqeel\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mauiimage.inputs
+E:\waqeel\waqeel\waqeel\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mauifont.inputs
+E:\waqeel\waqeel\waqeel\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mauisplash.inputs
+E:\waqeel\waqeel\waqeel\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mauimanifest.stamp
+E:\waqeel\waqeel\waqeel\obj\Debug\net10.0-windows10.0.19041.0\win-x64\Platforms\Windows\App.g.i.cs
+E:\waqeel\waqeel\waqeel\obj\Debug\net10.0-windows10.0.19041.0\win-x64\Platforms\Windows\App.g.cs
+E:\waqeel\waqeel\waqeel\obj\Debug\net10.0-windows10.0.19041.0\win-x64\XamlTypeInfo.g.cs
+E:\waqeel\waqeel\waqeel\obj\Debug\net10.0-windows10.0.19041.0\win-x64\Platforms\Windows\App.xaml
+E:\waqeel\waqeel\waqeel\obj\Debug\net10.0-windows10.0.19041.0\win-x64\Platforms\Windows\App.xbf
+E:\waqeel\waqeel\waqeel\obj\Debug\net10.0-windows10.0.19041.0\win-x64\XamlSaveStateFile.xml
+E:\waqeel\waqeel\waqeel\obj\Debug\net10.0-windows10.0.19041.0\win-x64\waqeel.GeneratedMSBuildEditorConfig.editorconfig

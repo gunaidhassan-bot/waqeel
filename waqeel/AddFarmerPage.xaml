@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="waqeel.AddFarmerPage"
+    Title="تعريف مزارع جديد"
+    FlowDirection="RightToLeft">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <Label Text="بيانات المزارع الجديد" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" />
+
+            <Entry x:Name="EntName" Placeholder="اسم المزارع الكامل" />
+            <Entry x:Name="EntPhone" Placeholder="رقم الجوال" Keyboard="Telephone" />
+            <Entry x:Name="EntAddress" Placeholder="المنطقة / العنوان" />
+            <Entry x:Name="EntOpeningBalance" Placeholder="الرصيد الافتتاحي (إن وجد)" Keyboard="Numeric" />
+
+            <Button Text="حفظ المزارع وفتح حساب" 
+                    BackgroundColor="#2B3F5C"
+                    TextColor="White"
+                    Clicked="OnSaveFarmerClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

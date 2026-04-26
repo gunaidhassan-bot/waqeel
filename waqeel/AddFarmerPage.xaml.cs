@@ -17,19 +17,16 @@ namespace waqeel
         {
             try
             {
-                // 1. إنشاء الحساب في الدليل المحاسبي أولاً
                 var newAccount = new Account
                 {
                     AccountName = EntName.Text,
-                    ParentCode = 101, // افترضنا أن 101 هو رقم حساب "الأب: المزارعين"
+                    ParentCode = 101,
                     AccountType = "Sub",
                     Balance = decimal.Parse(EntOpeningBalance.Text ?? "0")
                 };
-
                 _context.Accounts.Add(newAccount);
-                await _context.SaveChangesAsync(); // نحفظ لكي نحصل على AccountCode إذا كان مُولدًا
+                await _context.SaveChangesAsync();
 
-                // 2. ربط المزارع بالحساب الذي أنشئ للتو
                 var newFarmer = new Farmer
                 {
                     FullName = EntName.Text,
@@ -37,18 +34,21 @@ namespace waqeel
                     Address = EntAddress.Text,
                     AccountId = newAccount.AccountCode
                 };
-
                 _context.Farmers.Add(newFarmer);
                 await _context.SaveChangesAsync();
-
-                await DisplayAlertAsync("تم بنجاح", $"تم تسجيل المزارع وفتح حساب مالي له برقم {newAccount.AccountCode}", "موافق");
-                await Navigation.PopAsync(); // العودة للخلف
+                await DisplayAlert("تم بنجاح", $"تم تسجيل المزارع وفتح حساب مالي له برقم {newAccount.AccountCode}", "موافق");
+                await Shell.Current.GoToAsync("//main");
             }
             catch (Exception ex)
             {
                 var msg = ex.GetBaseException()?.Message ?? ex.Message;
-                await DisplayAlertAsync("خطأ", "فشل الربط: " + msg, "موافق");
+                await DisplayAlert("خطأ", "فشل الربط: " + msg, "موافق");
             }
+        }
+        // زر العودة للرئيسية
+        private async void OnBackToHomeClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("//main");
         }
     }
 }
